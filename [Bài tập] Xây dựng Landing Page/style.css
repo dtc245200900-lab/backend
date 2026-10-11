@@ -1,0 +1,143 @@
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #242424;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Banner chính */
+.hero-section {
+    background-color: #f2f6fc;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 470px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Danh mục */
+.category-link {
+    display: block;
+    height: 100%;
+    padding: 24px 12px;
+    color: #242424;
+    border-radius: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.category-link:hover {
+    background-color: #f2f6fc;
+    transform: translateY(-4px);
+}
+
+.category-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.category-link h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.category-link span {
+    color: #0067b8;
+    font-size: 14px;
+}
+
+/* Khu vực sản phẩm */
+.products-section {
+    background-color: #f7f7f7;
+}
+
+.product-card {
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+    height: 190px;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-card .card-body {
+    padding: 20px;
+}
+
+.product-card .card-title {
+    font-weight: 600;
+}
+
+/* Banner phụ */
+.feature-banner {
+    background-color: #f2f6fc;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.feature-image {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/* Hỗ trợ */
+.support-section {
+    background-color: #f7f7f7;
+}
+
+/* Chân trang */
+.footer-link {
+    display: inline-block;
+    color: #fff;
+    margin: 5px 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 575.98px) {
+    .hero-section .display-4 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image {
+        max-height: 280px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .feature-image {
+        min-height: 220px;
+    }
+}
