@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Giao diện giản lược</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header cố định -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">f</div>
+            <input type="text" placeholder="Tìm kiếm trên Facebook">
+        </div>
+
+        <nav class="header-center">
+            <a href="#" class="active">🏠</a>
+            <a href="#">👥</a>
+            <a href="#">🎬</a>
+            <a href="#">🛒</a>
+        </nav>
+
+        <div class="header-right">
+            <button title="Menu">☰</button>
+            <button title="Tin nhắn">💬</button>
+            <button title="Thông báo">🔔</button>
+            <div class="avatar">K</div>
+        </div>
+    </header>
+
+    <!-- Khu vực chính -->
+    <div class="layout">
+
+        <!-- Sidebar trái -->
+        <aside class="sidebar-left">
+            <a href="#"><span>👤</span> Trang cá nhân</a>
+            <a href="#"><span>👥</span> Bạn bè</a>
+            <a href="#"><span>🕒</span> Kỷ niệm</a>
+            <a href="#"><span>🔖</span> Đã lưu</a>
+            <a href="#"><span>👨‍👩‍👧</span> Nhóm</a>
+            <a href="#"><span>🎬</span> Video</a>
+            <a href="#"><span>🛒</span> Marketplace</a>
+            <a href="#"><span>📅</span> Sự kiện</a>
+
+            <hr>
+            <h3>Lối tắt của bạn</h3>
+            <a href="#"><span>💻</span> Lập trình Web</a>
+            <a href="#"><span>🎮</span> Cộng đồng Game</a>
+        </aside>
+
+        <!-- Nội dung chính -->
+        <main class="main-content">
+
+            <section class="stories">
+                <div class="story create-story">
+                    <div class="story-image">+</div>
+                    <p>Tạo tin</p>
+                </div>
+
+                <div class="story story-one">
+                    <div class="story-avatar">A</div>
+                    <p>Minh Anh</p>
+                </div>
+
+                <div class="story story-two">
+                    <div class="story-avatar">B</div>
+                    <p>Hoàng Bảo</p>
+                </div>
+
+                <div class="story story-three">
+                    <div class="story-avatar">C</div>
+                    <p>Thu Hà</p>
+                </div>
+            </section>
+
+            <!-- Tạo bài viết -->
+            <section class="create-post">
+                <div class="post-input-row">
+                    <div class="avatar">K</div>
+                    <input type="text" placeholder="Bạn đang nghĩ gì?">
+                </div>
+
+                <hr>
+
+                <div class="post-actions">
+                    <button>🔴 Video trực tiếp</button>
+                    <button>🖼️ Ảnh/video</button>
+                    <button>😊 Cảm xúc</button>
+                </div>
+            </section>
+
+            <!-- Bài viết 1 -->
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Nguyễn Minh Anh</strong>
+                        <p>2 giờ trước · 🌐</p>
+                    </div>
+                </div>
+
+                <p>Chào mọi người! Chúc mọi người một ngày vui vẻ 😊</p>
+
+                <div class="post-image image-one">
+                    <span>🌿</span>
+                    <h2>Một ngày mới thật tuyệt!</h2>
+                </div>
+
+                <div class="post-stats">
+                    <span>👍 ❤️ 128 lượt thích</span>
+                    <span>24 bình luận · 5 lượt chia sẻ</span>
+                </div>
+
+                <hr>
+
+                <div class="post-actions">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+
+            <!-- Bài viết 2 -->
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar avatar-blue">B</div>
+                    <div>
+                        <strong>Trần Hoàng Bảo</strong>
+                        <p>4 giờ trước · 🌐</p>
+                    </div>
+                </div>
+
+                <p>Hôm nay tiếp tục học HTML và CSS! 💻</p>
+
+                <div class="post-image image-two">
+                    <span>💻</span>
+                    <h2>Keep Learning!</h2>
+                    <p>HTML · CSS · JavaScript</p>
+                </div>
+
+                <div class="post-stats">
+                    <span>👍 56 lượt thích</span>
+                    <span>12 bình luận</span>
+                </div>
+
+                <hr>
+
+                <div class="post-actions">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Sidebar phải -->
+        <aside class="sidebar-right">
+            <h3>Được tài trợ</h3>
+            <div class="sponsor">
+                <div class="sponsor-image">💻</div>
+                <div>
+                    <strong>Học lập trình</strong>
+                    <p>Khám phá kiến thức công nghệ mới.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3>Người liên hệ</h3>
+            <a href="#" class="contact">
+                <span class="contact-avatar">A</span>
+                Nguyễn Minh Anh <i></i>
+            </a>
+            <a href="#" class="contact">
+                <span class="contact-avatar blue">B</span>
+                Trần Hoàng Bảo <i></i>
+            </a>
+            <a href="#" class="contact">
+                <span class="contact-avatar orange">C</span>
+                Lê Thu Hà <i></i>
+            </a>
+            <a href="#" class="contact">
+                <span class="contact-avatar purple">D</span>
+                Phạm Đức Long <i></i>
+            </a>
+        </aside>
+
+    </div>
+
+</body>
+</html>
