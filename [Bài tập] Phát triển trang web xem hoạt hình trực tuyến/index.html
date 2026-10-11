@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thế Giới Hoạt Hình</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">🎬 THẾ GIỚI HOẠT HÌNH</div>
+        <div class="search">
+            <input type="text" id="searchInput"
+                   placeholder="Tìm kiếm phim hoạt hình...">
+            <button onclick="searchMovies()">Tìm kiếm</button>
+        </div>
+    </header>
+
+    <nav class="head-link">
+        <a href="#">Phim hoạt hình</a>
+        <a href="#">Phim yêu thích</a>
+        <a href="#">Nhân vật hoạt hình</a>
+        <a href="#">Góp ý</a>
+    </nav>
+
+    <div class="container">
+        <aside class="left-content">
+            <h3>Danh sách phim</h3>
+
+            <div class="movie-list">
+                <div class="movie-item active"
+                     onclick="playMovie(0)">
+                    <div class="thumbnail">🐱</div>
+                    <div>
+                        <strong>Doraemon</strong>
+                        <p>Hoạt hình · Phiêu lưu</p>
+                    </div>
+                </div>
+
+                <div class="movie-item"
+                     onclick="playMovie(1)">
+                    <div class="thumbnail">🧽</div>
+                    <div>
+                        <strong>SpongeBob</strong>
+                        <p>Hoạt hình · Hài hước</p>
+                    </div>
+                </div>
+
+                <div class="movie-item"
+                     onclick="playMovie(2)">
+                    <div class="thumbnail">🐼</div>
+                    <div>
+                        <strong>Kung Fu Panda</strong>
+                        <p>Hoạt hình · Phiêu lưu</p>
+                    </div>
+                </div>
+
+                <div class="movie-item"
+                     onclick="playMovie(3)">
+                    <div class="thumbnail">🦁</div>
+                    <div>
+                        <strong>The Lion King</strong>
+                        <p>Hoạt hình · Gia đình</p>
+                    </div>
+                </div>
+
+                <div class="movie-item"
+                     onclick="playMovie(4)">
+                    <div class="thumbnail">❄️</div>
+                    <div>
+                        <strong>Frozen</strong>
+                        <p>Hoạt hình · Âm nhạc</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="right-content">
+            <h2 id="movieTitle">Doraemon - Phim hoạt hình</h2>
+
+            <div class="video-container">
+                <iframe
+                    id="movieFrame"
+                    src="https://www.youtube-nocookie.com/embed/8sJk2H7z8wA"
+                    title="Video hoạt hình"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="movie-info">
+                <h3>Giới thiệu phim</h3>
+                <p id="movieDescription">
+                    Cùng khám phá những chuyến phiêu lưu thú vị
+                    với các nhân vật hoạt hình đáng yêu.
+                </p>
+                <span class="tag">Hoạt hình</span>
+                <span class="tag">Giải trí gia đình</span>
+            </div>
+
+            <section class="recommend">
+                <h3>Phim dành cho bạn</h3>
+                <p>Chọn một bộ phim trong danh sách bên trái để xem.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Thế Giới Hoạt Hình. Giao diện thực hành HTML & CSS.</p>
+    </footer>
+
+    <script>
+        const movies = [
+            {
+                title: "Doraemon - Phim hoạt hình",
+                description: "Những chuyến phiêu lưu thú vị cùng Doraemon và Nobita.",
+                video: "jfKfPfyJRdk"
+            },
+            {
+                title: "SpongeBob - Phim hoạt hình",
+                description: "Những câu chuyện vui nhộn dưới đáy đại dương.",
+                video: "tVlcKp3bWH8"
+            },
+            {
+                title: "Kung Fu Panda - Phim hoạt hình",
+                description: "Hành trình rèn luyện và trưởng thành của gấu trúc Po.",
+                video: "PXi3Mv6KMzY"
+            },
+            {
+                title: "The Lion King - Phim hoạt hình",
+                description: "Câu chuyện về tình bạn, gia đình và lòng dũng cảm.",
+                video: "lFzVJEksoDY"
+            },
+            {
+                title: "Frozen - Phim hoạt hình",
+                description: "Cuộc phiêu lưu kỳ diệu của hai chị em Elsa và Anna.",
+                video: "TbQm5doF_Uc"
+            }
+        ];
+
+        function playMovie(index) {
+            document.getElementById("movieTitle").textContent =
+                movies[index].title;
+
+            document.getElementById("movieDescription").textContent =
+                movies[index].description;
+
+            document.getElementById("movieFrame").src =
+                "https://www.youtube-nocookie.com/embed/" +
+                movies[index].video;
+
+            document.querySelectorAll(".movie-item").forEach((item, i) => {
+                item.classList.toggle("active", i === index);
+            });
+        }
+
+        function searchMovies() {
+            const keyword = document.getElementById("searchInput")
+                .value.trim().toLowerCase();
+
+            document.querySelectorAll(".movie-item").forEach((item) => {
+                const title = item.querySelector("strong")
+                    .textContent.toLowerCase();
+
+                item.style.display = title.includes(keyword)
+                    ? "flex"
+                    : "none";
+            });
+        }
+
+        document.getElementById("searchInput").addEventListener(
+            "keydown",
+            function(event) {
+                if (event.key === "Enter") {
+                    searchMovies();
+                }
+            }
+        );
+    </script>
+
+</body>
+</html>
