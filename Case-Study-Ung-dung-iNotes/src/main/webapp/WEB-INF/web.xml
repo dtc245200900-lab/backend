@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="6.0">
+    <display-name>iNotes</display-name>
+    <context-param>
+        <param-name>storageMode</param-name>
+        <param-value>file</param-value>
+    </context-param>
+    <welcome-file-list>
+        <welcome-file>notes</welcome-file>
+    </welcome-file-list>
+</web-app>
