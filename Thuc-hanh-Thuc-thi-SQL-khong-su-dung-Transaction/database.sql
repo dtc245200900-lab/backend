@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS demo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE demo;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(120) NOT NULL,
+  country VARCHAR(80) NOT NULL
+) ENGINE=InnoDB;
+
+-- Bảng Employee phục vụ bài thực hành không dùng transaction.
+-- Cấu trúc tương thích với các câu lệnh INSERT/UPDATE trong UserDAO.
+CREATE TABLE IF NOT EXISTS Employee (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  salary DECIMAL(15,2) NOT NULL,
+  created_Date TIMESTAMP NULL
+) ENGINE=InnoDB;
